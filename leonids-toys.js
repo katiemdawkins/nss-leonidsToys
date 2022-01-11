@@ -11,7 +11,7 @@ const toys = [
         name: "Malibu Barbie",
         manufacturer: "Matel",
         numberInStock: 22,
-        price: 45
+        price: 25
     },
     {
         id: 3,
@@ -42,6 +42,7 @@ toys.push(slime)
 toys.push(elmo)
 
 for (const toy of toys){
+    toy.price = toy.price + 0.05 * toy.price
     console.log(`The ${toy.name} is made by ${toy.manufacturer} and costs $${toy.price}`)
 }
 //console.log(toys) commented out to see just the for... of loop in the console
