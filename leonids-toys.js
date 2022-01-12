@@ -1,7 +1,7 @@
 const toys = [
     {
         id: 1,
-        name: "Lego Castle Set",
+        name: "Lego Castle",
         manufacturer: "Lego",
         numberInStock: 22,
         price: 45
@@ -24,7 +24,7 @@ const toys = [
 
 const slime = {
     id: 4,
-    name: "Slime- Green",
+    name: "Green Slime",
     manufacturer: "Matel",
     numberInStock: 16,
     price: 11
@@ -61,11 +61,31 @@ for (const toy of toys){
   
 console.log(toys)
 
+const malibuBarbie = new Map()
+malibuBarbie.set(toys[1], 25)
+
+const legoCastle = new Map()
+legoCastle.set(toys[0],45)
+
+const foxPuzzle = new Map()
+foxPuzzle.set(toys[3],14)
+
+const greenSlime = new Map()
+greenSlime.set(slime, 11)
+
+const elmoToy = new Map()
+elmoToy.set(elmo, 25)
+
+console.log(malibuBarbie)
+console.log(legoCastle)
+
+
+
 //Step 2: Create a new map to store prices for each toy. Key= toy object. Value = price.
-const toys2 = new Map( [ [toys[0], 45], [toys[1], 25], [toys[2], 14] ] );
-    for (let [k,v] of toys2) {
-        console.log(k,v);
-    }
+//const toys2 = new Map( [ [toys[0], 45], [toys[1], 25], [toys[2], 14] ] );
+    //for (let [k,v] of toys2) {
+    //    console.log(k,v);
+    //}
 
 
 //const addPhoneToInventory = (phoneObject, price) => {
