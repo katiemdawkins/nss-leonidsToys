@@ -41,10 +41,66 @@ const elmo = {
 toys.push(slime)
 toys.push(elmo)
 
+
+// Maps Challenge Below ------------------------
+
+//The Problem: Prices change over time. We need to delete the prices
+//from the toys objects. 
+//We need to create a Map to store the prices for each toy. 
+    //The key = toy object, The value = price.
+    //Print name and price of each toy.
+        //Modify push function to accept second parameter- price. 
+        //After adding the toy to inventory, add key/value pair to map.
+
+
+
+//Step 1 : delete the price property on objects in my toys array. Done!
 for (const toy of toys){
-    toy.price = toy.price + 0.05 * toy.price
-    console.log(`The ${toy.name} is made by ${toy.manufacturer} and costs $${toy.price}`)
+    delete toy.price
 }
+  
+console.log(toys)
+
+//Step 2: Create a new map to store prices for each toy. Key= toy object. Value = price.
+const toys2 = new Map( [ [toys[0], 45], [toys[1], 25], [toys[2], 14] ] );
+    for (let [k,v] of toys2) {
+        console.log(k,v);
+    }
+
+
+//const addPhoneToInventory = (phoneObject, price) => {
+    
+//}
+
+// Add the first toy in the array to the Map and set its price
+//addPhoneToInventory(toys[0], 49.99)
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------- exercises from the chapter below----------
+//const toyToFind = 5
+
+//for (const toy of toys){
+    //if (toy.id === toyToFind) {
+  //      console.log(`The ${toy.name} is made by ${toy.manufacturer} and costs $${toy.price}`) 
+   // }
+//}
+
+//for (const toy of toys){
+    //below: adding 5% price increase to each toy
+    //toy.price = toy.price + 0.05 * toy.price
+   // console.log(`The ${toy.name} is made by ${toy.manufacturer} and costs $${toy.price}`)
+//}
 //console.log(toys) commented out to see just the for... of loop in the console
 
 //for (const toy of toys) {
